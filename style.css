@@ -14,16 +14,23 @@ header {
     color: #ecf0f1;
     padding: 1rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
 }
 
 header h1 {
     margin-bottom: 0.5rem;
 }
 
-header nav {
+.navbar {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 header a {
@@ -97,7 +104,6 @@ header a:hover {
     font-size: 1.1rem;
     background-color: #2c3e50;
     color: #ecf0f1;
-    /*margin-bottom: 1rem;*/
 }
 
 .hide {
@@ -120,7 +126,7 @@ header a:hover {
     padding: 0.3rem 0;
 }
 
-.contactsHeading{
+.contactsHeading {
     background-color: #1e90ff;
     color: white;
     text-align: center;
@@ -140,9 +146,32 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    header nav {
+    header {
         flex-direction: column;
         align-items: center;
+    }
+
+    .header-content {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .navbar {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar a:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .main {
